@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 firebase-service-account.json
 *.json
+!vercel.json
+dist/

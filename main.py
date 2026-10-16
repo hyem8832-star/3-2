@@ -25,9 +25,9 @@ except ImportError:
 
 
 class DataItem(BaseModel):
-    date: str
-    value: float
-    memo: str = ""
+    date: str = Field(min_length=10, max_length=10, pattern=r"^\d{4}-\d{2}-\d{2}$")
+    value: float = Field(ge=0, le=1_000_000_000)
+    memo: str = Field(default="", max_length=200)
 
 
 class Conversation(BaseModel):
