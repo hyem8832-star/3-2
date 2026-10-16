@@ -8,7 +8,7 @@ from typing import Any, Optional
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 load_dotenv()
 
@@ -28,6 +28,15 @@ class DataItem(BaseModel):
     date: str = Field(min_length=10, max_length=10, pattern=r"^\d{4}-\d{2}-\d{2}$")
     value: float = Field(ge=0, le=1_000_000_000)
     memo: str = Field(default="", max_length=200)
+
+    @field_validator("date")
+    @classmethod
+    def validate_date(cls, value: str) -> str:
+        try:
+            datetime.strptime(value, "%Y-%m-%d")
+        except ValueError as exc:
+            raise ValueError("date는 YYYY-MM-DD 형식의 실제 날짜여야 합니다") from exc
+        return value
 
 
 class Conversation(BaseModel):
