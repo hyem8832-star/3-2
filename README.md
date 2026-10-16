@@ -24,11 +24,11 @@ uvicorn main:app --reload
 
 ## 배포
 
-백엔드는 Render에서 `render.yaml`을 사용해 배포할 수 있습니다. 프론트는 `index.html`을 Vercel에 배포합니다. 배포 후 `index.html`의 `window.API_BASE_URL` 값 또는 브라우저 콘솔의 `localStorage.setItem('API_BASE_URL', 'https://배포된-백엔드')`에 백엔드 주소를 설정합니다. 실제 제출 시 아래 URL을 본인의 배포 주소로 교체하세요.
+백엔드는 Render에서, 프론트는 Vercel에서 배포합니다. 프론트에는 배포된 Render 백엔드 주소가 기본값으로 설정되어 있습니다.
 
-- 프론트 배포 URL: (Vercel 배포 후 입력)
-- 백엔드 API URL: (Render 배포 후 입력)
-- Swagger URL: (Render URL)/docs
+- 프론트 배포 URL: https://3-2-rndqxlqjg-1-8dd8.vercel.app
+- 백엔드 API URL: https://data-ai-assistant-api-3mcf.onrender.com
+- Swagger URL: https://data-ai-assistant-api-3mcf.onrender.com/docs
 
 ## 제출 전 체크리스트
 
