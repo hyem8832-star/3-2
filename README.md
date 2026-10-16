@@ -26,7 +26,7 @@ uvicorn main:app --reload
 
 백엔드는 Render에서, 프론트는 Vercel에서 배포합니다. Vercel 프로젝트의 Environment Variables에 `API_BASE_URL=https://data-ai-assistant-api-3mcf.onrender.com`을 등록하면 빌드 시 프론트에 API 주소가 주입됩니다. 로컬에서는 기본값 또는 `window.API_BASE_URL`·`localStorage` 설정을 사용할 수 있습니다.
 
-- 프론트 배포 URL: https://3-2-rndqxlqjg-1-8dd8.vercel.app
+- 프론트 배포 URL: https://3-2-gray-sigma.vercel.app
 - 백엔드 API URL: https://data-ai-assistant-api-3mcf.onrender.com
 - Swagger URL: https://data-ai-assistant-api-3mcf.onrender.com/docs
 
