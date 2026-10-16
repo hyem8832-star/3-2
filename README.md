@@ -43,7 +43,16 @@ uvicorn main:app --reload
 제출물에는 다음 화면을 캡처해 첨부합니다.
 
 1. 데이터 요약과 질문·AI 답변이 함께 보이는 채팅 화면
+
+![데이터 요약과 AI 답변](screenshots/01-chat-answer.PNG)
+
 2. 데이터 추가 또는 삭제 결과가 보이는 데이터 관리 화면
+
+![데이터 추가](screenshots/02-data-add.PNG)
+
 3. 대화 목록에서 `불러오기`를 눌러 이전 메시지가 표시된 화면
+
+![대화 기록 목록](screenshots/03-conversation-load-1.PNG)
+![대화 불러오기 결과](screenshots/03-conversation-load-2.PNG)
 
 주요 API: `POST/GET/PUT/DELETE /api/data`, `GET /api/data/summary`, `POST/GET/DELETE /api/conversations`, `GET /api/conversations/{id}`, `POST /api/chat`.
