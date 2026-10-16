@@ -38,4 +38,12 @@ uvicorn main:app --reload
 - [ ] `/docs`에서 API 확인
 - [ ] 요약+채팅, 데이터 추가/삭제, 대화 불러오기 화면 스크린샷 첨부
 
+## 제출 스크린샷
+
+제출물에는 다음 화면을 캡처해 첨부합니다.
+
+1. 데이터 요약과 질문·AI 답변이 함께 보이는 채팅 화면
+2. 데이터 추가 또는 삭제 결과가 보이는 데이터 관리 화면
+3. 대화 목록에서 `불러오기`를 눌러 이전 메시지가 표시된 화면
+
 주요 API: `POST/GET/PUT/DELETE /api/data`, `GET /api/data/summary`, `POST/GET/DELETE /api/conversations`, `GET /api/conversations/{id}`, `POST /api/chat`.
